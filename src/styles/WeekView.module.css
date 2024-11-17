@@ -1,0 +1,59 @@
+.weekView {
+  display: flex;
+  flex: 1;
+  overflow: auto;
+}
+
+.timeColumn {
+  width: 60px;
+  border-right: 1px solid #dadce0;
+}
+
+.timeSlot {
+  height: 60px;
+  padding: 0 8px;
+  text-align: right;
+  color: #70757a;
+  font-size: 10px;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  flex: 1;
+}
+
+.dayColumn {
+  border-right: 1px solid #dadce0;
+}
+
+.dayHeader {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #dadce0;
+  font-size: 12px;
+  color: #70757a;
+}
+
+.hourSlot {
+  height: 60px;
+  border-bottom: 1px solid #dadce0;
+}
+
+@media (max-width: 768px) {
+  .timeColumn {
+    width: 40px;
+  }
+
+  .dayHeader {
+    height: 40px;
+  }
+
+  .weekday {
+    font-size: 10px;
+  }
+
+  .dayNumber {
+    font-size: 20px;
+  }
+}
