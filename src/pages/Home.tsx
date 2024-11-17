@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Calendar from '../components/Calendar/Calendar'
 import { CalendarEvent } from '../types/Event'
-
+import Navbar from '../components/Navbar/Navbar'
 export default function Home() {
   const sampleEvents: CalendarEvent[] = [
     {
@@ -34,8 +34,11 @@ export default function Home() {
     }
   ]
   return (
-    <div className={styles.container}>
-      <Calendar  events={sampleEvents}/>
-    </div>
+    <>
+      <Navbar />
+      <div className={styles.container}>
+        <Calendar events={sampleEvents} />
+      </div>
+    </>
   )
 }

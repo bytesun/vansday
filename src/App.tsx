@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import  { CalendarEvent } from './types/Event'
 import './App.css'
-import Home from './pages/Home'
+import { Routes, Route } from 'react-router-dom'
+import RootLayout from './layouts/RootLayout'
+import Calendar from './components/Calendar/Calendar'
 
-
-function App() {
-
+export default function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Routes>
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Calendar />} />
+        <Route path="calendars" element={<Calendar />} />
+        <Route path="events" element={<div>Events Page</div>} />
+        <Route path="todos" element={<div>Todos Page</div>} />
+        <Route path="notes" element={<div>Notes Page</div>} />
+        <Route path="login" element={<div>Login Page</div>} />
+      </Route>
+    </Routes>
   )
 }
-
-export default App
