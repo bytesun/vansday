@@ -6,9 +6,9 @@ interface AgendaViewProps {
   events?: CalendarEvent[]
 }
 
-export default function AgendaView({ currentDate, events = [] }: AgendaViewProps) {
+export default function AgendaView({  events = [] }: AgendaViewProps) {
   const sortedEvents = [...events].sort((a, b) => a.date.getTime() - b.date.getTime())
-
+  
   return (
     <div className={styles.agendaView}>
       <div className={styles.timeline}>

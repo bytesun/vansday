@@ -1,4 +1,4 @@
-import { CalendarEvent } from '../../types/CalendarTypes'
+import { CalendarEvent } from '../../types/Event';
 import styles from '../../styles/WeekView.module.css'
 
 interface WeekViewProps {
@@ -6,7 +6,7 @@ interface WeekViewProps {
   events?: CalendarEvent[]
 }
 
-export default function WeekView({ currentDate, events = [] }: WeekViewProps) {
+export default function WeekView({ currentDate }: WeekViewProps) {
   const getWeekDays = () => {
     const days = []
     const startOfWeek = new Date(currentDate)
